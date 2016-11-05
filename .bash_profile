@@ -2,7 +2,7 @@ alias ll='ls -la'
 alias cd..='cd ../'
 alias n6='node --harmony --harmony_arrow_functions'
 alias ck='npm'
-export USER="":
+export USER=""
 PATH=$PATH:~/Data/Scripts:~/Data/Utils/rar:~/_Applications:~/_Applications/lynx:~/npm/bin
 
 #git complition
