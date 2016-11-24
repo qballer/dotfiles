@@ -21,7 +21,11 @@ set nocompatible
 set backspace=indent,eol,start
 
 " Switch syntax highlighting on
+
+set t_Co=256
 syntax on
+set background=dark
+colorscheme distinguished
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
@@ -32,8 +36,74 @@ set number
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
-" splitting panes keyboard shortcut
-nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split  
-nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split  
-nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split  
-nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split 
+" keyboard shortcuts for splits
+nnoremap <C-J> <C-W><C-J> "Ctrl-j to move down a split
+nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
+nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split
+nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
+
+"pathogen 
+execute pathogen#infect()
+
+"vim plug
+call plug#begin()
+	Plug 'Valloric/YouCompleteMe'
+call plug#end()
+
+" nerd tree
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+"air line
+ if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  " unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+  set hlsearch
+
+  " syntactic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+ " standard
+let g:syntastic_javascript_checkers = ['standard']
+set virtualedit=all
+
+" git markdown
+let vim_markdown_preview_toggle=2
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<C-,>'
+
+"ctrlp
+let g:ctrlp_user_command = 'find %s -type f | ack -iv "node_modules/.*/node_modules|.git|dist"'
+"You complete me 
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+	  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  endif
