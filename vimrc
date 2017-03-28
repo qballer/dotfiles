@@ -68,6 +68,7 @@ call plug#begin()
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'Townk/vim-autoclose'
 	Plug 'vim-scripts/closetag.vim'
+	Plug 'Lokaltog/vim-distinguished'
 call plug#end()
 
 " nerd tree
