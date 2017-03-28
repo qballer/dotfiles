@@ -52,7 +52,7 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'marijnh/tern_for_vim'
-	Plug 'helino/vim-json'
+	Plug 'elzr/vim-json'
 	Plug 'mhinz/vim-signify'
 	Plug 'rking/ag.vim'
 	Plug 'leafgarland/typescript-vim'
