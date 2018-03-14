@@ -1,31 +1,6 @@
-" A minimal vimrc for new vim users to start with.
-"
-" Referenced here: http://vimuniversity.com/samples/your-first-vimrc-should-be-nearly-empty
-"
-" Original Author:	     Bram Moolenaar <Bram@vim.org>
-" Made more minimal by:  Ben Orenstein
-" Modified by :          Ben McCormick
-" Last change:	         2014 June 8
-"
-" To use it, copy it to
-"  for Unix based systems (including OSX and Linux):  ~/.vimrc
-"  for Windows :  $VIM\_vimrc
-"
-"  If you don't understand a setting in here, just type ':h setting'.
-
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-
-" Make backspace behave in a sane manner.
-set backspace=indent,eol,start
-   
-" Switch syntax highlighting on
-
 set t_Co=256
 syntax on
 set background=dark
-colorscheme distinguished
 
 " Enable file type detection and do language-dependent indenting.
 filetype plugin indent on
@@ -42,8 +17,6 @@ nnoremap <C-K> <C-W><C-K> "Ctrl-k to move up a split
 nnoremap <C-L> <C-W><C-L> "Ctrl-l to move    right a split
 nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
 
-"pathogen 
-execute pathogen#infect()
 
 "vim plug
 call plug#begin()
@@ -51,17 +24,13 @@ call plug#begin()
 	Plug 'jelera/vim-javascript-syntax'
 	Plug 'vim-airline/vim-airline'
 	Plug 'editorconfig/editorconfig-vim'
-	Plug 'marijnh/tern_for_vim'
 	Plug 'elzr/vim-json'
 	Plug 'mhinz/vim-signify'
-	Plug 'rking/ag.vim'
 	Plug 'leafgarland/typescript-vim'
-	Plug 'kien/ctrlp.vim'
 	Plug 'scrooloose/nerdtree'
 	Plug 'chrisbra/vim-diff-enhanced'
 	Plug 'maksimr/vim-jsbeautify'
 	Plug 'Quramy/tsuquyomi'
-	Plug 'Quramy/vim-js-pretty-template'
 	Plug 'jason0x43/vim-js-indent'
 	Plug 'vim-syntastic/syntastic'   
 	Plug 'fatih/vim-go'
@@ -70,6 +39,9 @@ call plug#begin()
 	Plug 'vim-scripts/closetag.vim'
 	Plug 'Lokaltog/vim-distinguished'
 call plug#end()
+
+::colorscheme distinguished
+
 
 " nerd tree
 map <C-n> :NERDTreeToggle<CR>
