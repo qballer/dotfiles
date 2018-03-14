@@ -20,7 +20,6 @@ nnoremap <C-H> <C-W><C-H> "Ctrl-h to move left a split
 
 "vim plug
 call plug#begin()
-	Plug 'Valloric/YouCompleteMe'
 	Plug 'jelera/vim-javascript-syntax'
 	Plug 'vim-airline/vim-airline'
 	Plug 'editorconfig/editorconfig-vim'
