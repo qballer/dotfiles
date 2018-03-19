@@ -32,11 +32,11 @@ call plug#begin()
 	Plug 'Quramy/tsuquyomi'
 	Plug 'jason0x43/vim-js-indent'
 	Plug 'vim-syntastic/syntastic'   
-	Plug 'fatih/vim-go'
 	Plug 'editorconfig/editorconfig-vim'
 	Plug 'Townk/vim-autoclose'
 	Plug 'vim-scripts/closetag.vim'
 	Plug 'Lokaltog/vim-distinguished'
+	Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 call plug#end()
 
 ::colorscheme distinguished
