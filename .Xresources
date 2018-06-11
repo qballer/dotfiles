@@ -1,0 +1,21 @@
+URxvt.background: #000000
+URxvt.foreground: #ffffff
+URxvt.scrollBar: false
+
+URxvt*buffered: true
+Urxvt*secondaryScroll:  true    # enable Shift-PageUp/Down in screen
+URxvt*saveLines: 5000
+URxvt.urlLauncher: firefox
+
+URxvt*font: xft: DejaVu Sans Mono for Powerline:pixelsize=13:antialias=true:hinting=true
+
+! Make blue not so dark
+*color4: #268bd2
+*color12: #268bd2
+
+! copy/paste with ctrl-shift-c and ctrl-shift-v
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! toogle language
+bindsym Control+Alt exec ~/.config/i3/change_lang.sh
