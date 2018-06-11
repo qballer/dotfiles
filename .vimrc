@@ -26,18 +26,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-syntastic/syntastic'
 	Plug 'nvie/vim-flake8'
 	Plug 'jnurmine/Zenburn'
-	Plug 'altercation/vim-colors-solarized'
 	Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+	Plug 'dracula/vim', {'as':'dracula'}
 call plug#end()
-
-if has('gui_running')
-  set background=dark
-  colorscheme solarized-dark
-else
-  colorscheme zenburn
-endif
-
-call togglebg#map("<F5>")
 
 let python_highlight_all=1
 
@@ -45,6 +36,7 @@ map <C-n> :NERDTreeToggle<CR> " nerd tree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let g:SimpylFold_docstring_preview=1
 
+color dracula
 " move between splits 
 "
 
@@ -55,16 +47,6 @@ nnoremap <C-H> <C-W><C-H>
 
 nnoremap <space> za
 
-"python tab configuration 
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
 
 "js configuration 
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -73,7 +55,7 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set shiftwidth=2
 
 " bad whitespace
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+" au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
