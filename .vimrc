@@ -28,7 +28,11 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jnurmine/Zenburn'
 	Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 	Plug 'dracula/vim', {'as':'dracula'}
+	Plug 'francoiscabrol/ranger.vim'
 call plug#end()
+
+let g:NERDTreeHijackNetrw = 0 
+let g:ranger_replace_netrw = 1 
 
 let python_highlight_all=1
 
