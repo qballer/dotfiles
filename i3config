@@ -197,7 +197,8 @@ exec_always xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 exec --no-startup-id compton -f
 
 # lang change 
-bindsym Shift+Alt exec ~/.config/i3/lang_change.sh
+
+#bindsym Shift+Alt exec ~/.config/i3/lang_change.sh - #doesn't work 
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us
 bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap il
 
