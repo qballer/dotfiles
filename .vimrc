@@ -7,7 +7,7 @@ set showmatch
 set foldmethod=indent
 set foldlevel=99
 set clipboard=unnamed
-
+set guifont=Monaco:h20
 
 " autoload vim plug 
 "
@@ -29,7 +29,15 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 	Plug 'dracula/vim', {'as':'dracula'}
 	Plug 'francoiscabrol/ranger.vim'
+	Plug 'leafgarland/typescript-vim'
+	Plug 'fatih/vim-go'
+	Plug 'jiangmiao/auto-pairs'
+	Plug 'gabrielelana/vim-markdown'
 call plug#end()
+
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+let g:typescript_indent_disable = 1
 
 let g:NERDTreeHijackNetrw = 0 
 let g:ranger_replace_netrw = 1 
@@ -49,14 +57,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-nnoremap <space> za
+"
+nnoremap <C-X> :source ~/.vimrc<CR>
 
-
-"js configuration 
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+"nnoremap <space> za
 
 " bad whitespace
 " au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/

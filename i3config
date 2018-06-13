@@ -200,3 +200,7 @@ exec --no-startup-id compton -f
 bindsym Shift+Alt exec ~/.config/i3/lang_change.sh
 bindsym Ctrl+Shift+1 exec --no-startup-id setxkbmap us
 bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap il
+
+ # printscreen 
+bindsym Control+Print exec gnome-screenshot -i
+
