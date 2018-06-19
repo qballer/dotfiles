@@ -66,4 +66,6 @@ nnoremap <C-X> :source ~/.vimrc<CR>
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+"yapf 
+autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 
