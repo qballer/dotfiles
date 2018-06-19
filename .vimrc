@@ -18,21 +18,21 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" configure ale for Go, Javascript, Typescript and Python
 call plug#begin('~/.vim/plugged')
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'vim-scripts/indentpython.vim'
 	Plug 'Valloric/YouCompleteMe'
 	Plug 'vim-syntastic/syntastic'
-	Plug 'nvie/vim-flake8'
 	Plug 'jnurmine/Zenburn'
 	Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 	Plug 'dracula/vim', {'as':'dracula'}
-	Plug 'francoiscabrol/ranger.vim'
 	Plug 'leafgarland/typescript-vim'
 	Plug 'fatih/vim-go'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'gabrielelana/vim-markdown'
+	Plug 'w0rp/ale' 
 call plug#end()
 
 let g:typescript_compiler_binary = 'tsc'
@@ -40,7 +40,6 @@ let g:typescript_compiler_options = ''
 let g:typescript_indent_disable = 1
 
 let g:NERDTreeHijackNetrw = 0 
-let g:ranger_replace_netrw = 1 
 
 let python_highlight_all=1
 
