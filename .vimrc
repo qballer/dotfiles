@@ -33,6 +33,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'gabrielelana/vim-markdown'
 	Plug 'w0rp/ale' 
+	Plug 'python-mode/python-mode', { 'branch': 'develop' }
+	Plug 'aradunovic/perun.vim'
 call plug#end()
 
 let g:typescript_compiler_binary = 'tsc'
@@ -47,7 +49,7 @@ map <C-n> :NERDTreeToggle<CR> " nerd tree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let g:SimpylFold_docstring_preview=1
 
-color dracula
+color perun
 " move between splits 
 "
 
